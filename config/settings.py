@@ -113,5 +113,5 @@ STATIC_URL = '/static/'
 
 # django-allauth
 SITE_ID = 1
-LOGIN_REDIRECT_URL = 'hone'
-ACCOUNT_LOGOUT_REDIRECT_URL = '/account/login'
+LOGIN_REDIRECT_URL = 'home'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login'

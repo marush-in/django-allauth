@@ -111,7 +111,23 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Email Settings (Only Development)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # django-allauth
 SITE_ID = 1
+
 LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login'
+
+# ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_EMAIL_REQUIRED = True
+
+# django-allauth Authentication
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED_ = False
